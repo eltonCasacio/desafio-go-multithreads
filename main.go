@@ -81,6 +81,6 @@ func main() {
 	case viacepMessage := <-viacep:
 		fmt.Fprintf(os.Stdout, "VIACEP:: %v\n", viacepMessage)
 	case <-time.After(time.Second):
-		fmt.Println("Excedeu tempo limite de resposta")
+		fmt.Println("timeout")
 	}
 }
